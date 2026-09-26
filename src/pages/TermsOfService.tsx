@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FileTextIcon, AlertTriangleIcon, CheckCircle2Icon, ArrowLeftIcon, ScaleIcon } from "lucide-react";
+import { AlertTriangleIcon, ArrowLeftIcon, ScaleIcon } from "lucide-react";
 import { companyName, contactDetails } from "../data/contact";
 import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";

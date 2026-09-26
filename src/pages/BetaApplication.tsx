@@ -5,7 +5,6 @@ import {
   CheckCircle2Icon,
   CheckIcon,
   Loader2Icon,
-  SparklesIcon,
   ArrowRightIcon,
   MailIcon
 } from "lucide-react";

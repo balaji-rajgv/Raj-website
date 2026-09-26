@@ -17,9 +17,9 @@ import { Sitemap } from "./pages/Sitemap";
 import { Blogs } from "./pages/Blogs";
 import { NotFound } from "./pages/NotFound";
 
-export function App() {
+export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Routes>
         <Route element={<SiteLayout />}>
@@ -41,6 +41,14 @@ export function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </BrowserRouter>);
+    </>
+  );
+}
 
+export function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
 }

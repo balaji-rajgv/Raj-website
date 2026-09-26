@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
-import { ShieldCheckIcon, SlidersHorizontalIcon, CheckCircle2Icon, ArrowRightIcon, RefreshCwIcon } from "lucide-react";
+import { ShieldCheckIcon, SlidersHorizontalIcon, CheckCircle2Icon, RefreshCwIcon } from "lucide-react";
 import { companyName, contactDetails } from "../data/contact";
 import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";

@@ -1,29 +1,54 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { SITE_URL, routesSEO } from "../seo/config";
+import { getFullRouteSchemas } from "../seo/schemaGenerator";
 
 export interface SEOProps {
-  title: string;
-  description: string;
+  path?: string;
+  title?: string;
+  description?: string;
   canonical?: string;
   keywords?: string;
   type?: "website" | "article";
   image?: string;
+  imageAlt?: string;
   publishedTime?: string;
   author?: string;
-  schema?: Record<string, any> | Array<Record<string, any>>;
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
+  noindex?: boolean;
 }
 
-export function SEO({
-  title,
-  description,
-  canonical,
-  keywords,
-  type = "website",
-  image = "/image.png",
-  publishedTime,
-  author,
-  schema
-}: SEOProps) {
+export function SEO(props: SEOProps) {
+  let locationPath = "";
+  try {
+    const loc = useLocation();
+    locationPath = loc.pathname;
+  } catch {
+    // If outside router context
+    locationPath = "";
+  }
+
+  const activePath = props.path || locationPath || "/";
+  const routeConfig = routesSEO[activePath] || routesSEO["/"];
+
+  const title = props.title || routeConfig.title;
+  const description = props.description || routeConfig.description;
+  const keywords = props.keywords || routeConfig.keywords;
+  const type = props.type || routeConfig.type;
+  const image = props.image || routeConfig.image;
+  const publishedTime = props.publishedTime || routeConfig.publishedTime;
+  const author = props.author || routeConfig.author;
+  const noindex = props.noindex ?? routeConfig.noindex;
+  const canonical = props.canonical || activePath;
+
+  const resolvedSchema =
+    props.schema !== undefined
+      ? props.schema
+      : getFullRouteSchemas(routeConfig);
+
   useEffect(() => {
+    if (typeof document === "undefined") return;
+
     // 1. Update Title
     const formattedTitle = title.includes("Raj Global Ventures")
       ? title
@@ -57,20 +82,20 @@ export function SEO({
     if (keywords) {
       setMetaTag("name", "keywords", keywords);
     }
-    setMetaTag("name", "robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+
+    const robotsValue = noindex
+      ? "noindex, nofollow"
+      : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+    setMetaTag("name", "robots", robotsValue);
 
     // 3. Canonical Link
-    const fullCanonical = canonical
-      ? canonical.startsWith("http")
-        ? canonical
-        : `https://rajglobalventures.com${canonical}`
-      : `https://rajglobalventures.com${window.location.pathname}`;
+    const fullCanonical = canonical.startsWith("http")
+      ? canonical
+      : `${SITE_URL}${canonical === "/" ? "" : canonical}`;
     setLinkTag("canonical", fullCanonical);
 
     // 4. Open Graph Tags
-    const fullImageUrl = image.startsWith("http")
-      ? image
-      : `https://rajglobalventures.com${image}`;
+    const fullImageUrl = image.startsWith("http") ? image : `${SITE_URL}${image}`;
 
     setMetaTag("property", "og:title", formattedTitle);
     setMetaTag("property", "og:description", description);
@@ -95,21 +120,20 @@ export function SEO({
 
     // 6. Structured Schema (JSON-LD)
     let scriptElement: HTMLScriptElement | null = null;
-    if (schema) {
+    if (resolvedSchema) {
       scriptElement = document.createElement("script");
       scriptElement.type = "application/ld+json";
       scriptElement.id = "page-schema-jsonld";
-      scriptElement.text = JSON.stringify(schema);
+      scriptElement.text = JSON.stringify(resolvedSchema);
       document.head.appendChild(scriptElement);
     }
 
-    // Cleanup on unmount or route change
     return () => {
       if (scriptElement && scriptElement.parentNode) {
         scriptElement.parentNode.removeChild(scriptElement);
       }
     };
-  }, [title, description, canonical, keywords, type, image, publishedTime, author, schema]);
+  }, [title, description, canonical, keywords, type, image, publishedTime, author, resolvedSchema, noindex]);
 
   return null;
 }

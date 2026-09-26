@@ -5,5 +5,9 @@ import { App } from "./App";
 
 const rootEl = document.getElementById("root");
 if (rootEl) {
-  ReactDOM.createRoot(rootEl).render(<App />);
+  if (rootEl.hasChildNodes()) {
+    ReactDOM.hydrateRoot(rootEl, <App />);
+  } else {
+    ReactDOM.createRoot(rootEl).render(<App />);
+  }
 }
