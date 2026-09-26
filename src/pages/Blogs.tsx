@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { blogPosts, blogCategories } from "../data/blogs";
 import { FinalCta } from "../components/FinalCta";
+import { SEO } from "../components/SEO";
 
 export function Blogs() {
   const { slug } = useParams<{ slug?: string }>();
@@ -69,6 +70,40 @@ export function Blogs() {
   if (currentPost) {
     return (
       <article className="min-h-screen bg-white">
+        <SEO
+          title={`${currentPost.title} | Raj Global Ventures`}
+          description={currentPost.subtitle || currentPost.excerpt}
+          canonical={`/blogs/${currentPost.slug}`}
+          type="article"
+          image={currentPost.coverImage}
+          publishedTime={currentPost.publishDate}
+          author={currentPost.author.name}
+          keywords={currentPost.tags.join(", ")}
+          schema={{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: currentPost.title,
+            description: currentPost.excerpt,
+            image: `https://rajglobalventures.com${currentPost.coverImage}`,
+            author: {
+              "@type": "Organization",
+              name: currentPost.author.name
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Raj Global Ventures",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://rajglobalventures.com/image.png"
+              }
+            },
+            datePublished: currentPost.publishDate,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://rajglobalventures.com/blogs/${currentPost.slug}`
+            }
+          }}
+        />
         {/* Reader Top Navigation Bar */}
         <div className="sticky top-[72px] z-30 border-b border-line bg-white/95 backdrop-blur">
           <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3.5">
@@ -299,6 +334,12 @@ export function Blogs() {
   // -------------------------------------------------------------
   return (
     <>
+      <SEO
+        title="Trading Systems, Research & Market Insights | Raj Global Ventures"
+        description="In-depth engineering articles and market flow breakdowns covering Options, Futures, Equity, and Commodities infrastructure."
+        canonical="/blogs"
+        keywords="trading blogs, order flow articles, footprint charts, broker API architecture, machine learning market regimes"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6">

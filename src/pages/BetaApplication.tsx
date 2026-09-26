@@ -5,13 +5,12 @@ import {
   CheckCircle2Icon,
   CheckIcon,
   Loader2Icon,
-  ShieldCheckIcon,
   SparklesIcon,
-  ZapIcon,
   ArrowRightIcon,
   MailIcon
 } from "lucide-react";
 import { FinalCta } from "../components/FinalCta";
+import { SEO } from "../components/SEO";
 
 const inputClass =
   "mt-2 block w-full rounded-lg border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors duration-150 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30";
@@ -82,6 +81,12 @@ export function BetaApplication() {
 
   return (
     <>
+      <SEO
+        title="Apply for Early Beta Access | TradingFootprint"
+        description="Book your slot for the TradingFootprint early beta testing cohort. Multi-asset algorithmic platform for Options, Futures, Equity, and Commodities with 20+ broker connects."
+        canonical="/beta"
+        keywords="TradingFootprint beta access, algo trading beta testing, early access trading software, options trading beta, Raj Global Ventures"
+      />
       <section className="relative w-full overflow-hidden bg-canvas py-16 md:py-24" aria-labelledby="beta-heading">
         {/* Subtle decorative background glow */}
         <div className="pointer-events-none absolute -left-20 top-10 h-96 w-96 rounded-full bg-brand/5 blur-3xl" aria-hidden="true" />
@@ -345,24 +350,57 @@ export function BetaApplication() {
             {/* Sidebar / Info Section */}
             <aside className="space-y-6 lg:col-span-4">
               <div className="rounded-3xl border border-line/60 bg-white p-6 shadow-sm">
-                <div className="flex items-center gap-3 text-brand">
-                  <SparklesIcon className="h-6 w-6" />
-                  <h3 className="font-semibold text-ink">Why Join the Early Beta Cohort?</h3>
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                    <CheckIcon className="h-4 w-4 stroke-[2.5]" />
+                  </span>
+                  <h3 className="text-base font-semibold tracking-tight text-ink">Why Join the Early Beta Cohort?</h3>
                 </div>
-                <ul className="mt-5 space-y-4 text-sm text-muted">
-                  <li className="flex items-start gap-2.5">
-                    <ZapIcon className="mt-0.5 h-4 w-4 shrink-0 text-sun" />
-                    <span><strong>100% Free Testing:</strong> Zero subscription fees throughout the beta testing window.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <ShieldCheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-gain" />
-                    <span><strong>Direct Engineering Channel:</strong> Work with Giftson Raj (CEO &amp; Founder) to shape custom features.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <ZapIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
-                    <span><strong>20+ Broker Execution:</strong> Seamlessly connect Zerodha, Dhan, Angel One, Interactive Brokers, and others.</span>
-                  </li>
-                </ul>
+                <p className="mt-2 text-xs leading-relaxed text-muted">
+                  Exclusive access, direct technical influence, and early adopter privileges reserved for selected active traders.
+                </p>
+
+                <div className="mt-5 space-y-3.5 border-t border-line/60 pt-4">
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded bg-canvas font-mono text-[10px] font-bold text-brand border border-line">
+                      1
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold text-ink">100% Complimentary Beta Access</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-muted">Zero platform fees or subscription costs throughout the entire pre-release evaluation period.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded bg-canvas font-mono text-[10px] font-bold text-brand border border-line">
+                      2
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold text-ink">Direct Channel with Engineering &amp; Research Desks</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-muted">Work directly with our development and quantitative research teams to request custom indicators and execution algorithms.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded bg-canvas font-mono text-[10px] font-bold text-brand border border-line">
+                      3
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold text-ink">20+ Broker Connectivity Sandbox</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-muted">Seamlessly route and backtest across Zerodha, Angel One, Upstox, Dhan, Interactive Brokers, and others.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded bg-canvas font-mono text-[10px] font-bold text-brand border border-line">
+                      4
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold text-ink">Lifetime Early Adopter Status</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-muted">Guaranteed priority server bandwidth, grandfathered commercial pricing, and early access to proprietary quant models.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="rounded-3xl border border-line/60 bg-white p-6 shadow-sm">

@@ -4,10 +4,18 @@ import { VenueStrip } from "../components/VenueStrip";
 import { FinalCta } from "../components/FinalCta";
 import { images } from "../data/images";
 import { capabilities, segments } from "../data/financialSolutions";
+import { SEO } from "../components/SEO";
 
 export function FinancialSolutions() {
   return (
     <>
+      <SEO
+        title="Financial Solutions | Institutional Trading Infrastructure"
+        description="High-throughput trading infrastructure for brokers, proprietary funds, and fintech platforms. Ultra-low latency routing, pre-trade risk controls, and automated compliance."
+        canonical="/solutions/financial"
+        keywords="institutional trading infrastructure, broker API gateways, prop trading systems, pre-trade risk controls, Raj Global Ventures"
+        image="/9c713bdb-8941-4d97-8fd1-a0cd4099ca76.jpg"
+      />
       <PageHero
         eyebrow="Financial Solutions"
         title="Trading infrastructure for institutions that can't afford downtime"

@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 import { ShieldCheckIcon, SlidersHorizontalIcon, CheckCircle2Icon, ArrowRightIcon, RefreshCwIcon } from "lucide-react";
 import { companyName, contactDetails } from "../data/contact";
 import { FinalCta } from "../components/FinalCta";
+import { SEO } from "../components/SEO";
 
 export function CookiesPolicy() {
   const [currentStatus, setCurrentStatus] = useState<string>("Active Default");
@@ -31,6 +32,12 @@ export function CookiesPolicy() {
 
   return (
     <>
+      <SEO
+        title="Cookies Policy | Transparency & Local Cache Memory"
+        description="Learn how Raj Global Ventures utilizes essential cookies and local cache memory for trading preferences and security. Manage your interactive cookie settings."
+        canonical="/cookies"
+        keywords="cookies policy, privacy controls, cache memory, Raj Global Ventures"
+      />
       <section className="relative w-full overflow-hidden bg-canvas py-16 md:py-24" aria-labelledby="cookies-heading">
         {/* Subtle decorative background light accent */}
         <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-brand/5 blur-3xl" aria-hidden="true" />

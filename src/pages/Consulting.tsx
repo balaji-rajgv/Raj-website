@@ -4,10 +4,18 @@ import { PageHero } from "../components/PageHero";
 import { FinalCta } from "../components/FinalCta";
 import { images } from "../data/images";
 import { consultingDeliverables, consultingEngagements } from "../data/servicesDetail";
+import { SEO } from "../components/SEO";
 
 export function Consulting() {
   return (
     <>
+      <SEO
+        title="Trading Architecture & Latency Consulting | Raj Global Ventures"
+        description="Independent architecture reviews, sub-millisecond latency profiling, exchange compliance audits, and broker infrastructure consulting for trading firms."
+        canonical="/services/consulting"
+        keywords="trading latency consulting, trading architecture audit, exchange conformance testing, low latency profiling, Raj Global Ventures"
+        image="/58cc94d6-021f-4c3f-b958-cf04d53a41c9.jpg"
+      />
       <PageHero
         eyebrow="Services · Consulting"
         title="Expert eyes on your trading stack"

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  ShieldCheckIcon,
+  CookieIcon,
   SlidersHorizontalIcon,
   CheckIcon,
   XIcon
@@ -73,7 +73,7 @@ export function CookieConsentBanner() {
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-2.5">
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand/20 text-brand-soft">
-                  <ShieldCheckIcon className="h-4 w-4 text-sun" />
+                  <CookieIcon className="h-4 w-4 text-sun" />
                 </span>
                 <h2 id="cookie-banner-title" className="text-base font-semibold tracking-tight text-white">
                   Cookie Preferences

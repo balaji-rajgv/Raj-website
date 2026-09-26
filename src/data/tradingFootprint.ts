@@ -40,7 +40,7 @@ export const betaPerks = [
   },
   {
     title: "Direct Access to Core Engineers",
-    description: "Collaborate directly with CEO & Founder Giftson Raj and the engineering team to request custom features."
+    description: "Collaborate directly with our development and quantitative research teams to request custom features."
   },
   {
     title: "Lifetime Early Adopter Privileges",

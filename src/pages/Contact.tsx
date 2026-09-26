@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2Icon, ClockIcon, Loader2Icon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { useContactForm } from "../hooks/useContactForm";
 import { contactDetails, contactInterests } from "../data/contact";
+import { SEO } from "../components/SEO";
 
 const inputClass =
 "mt-2 block w-full rounded-lg border bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand/30";
@@ -16,7 +17,14 @@ export function Contact() {
   const fieldBorder = (hasError: boolean) => hasError ? "border-loss focus:border-loss" : "border-line focus:border-brand";
 
   return (
-    <section className="w-full bg-canvas py-16 md:py-24" aria-labelledby="contact-heading">
+    <>
+      <SEO
+        title="Contact Us | Speak to Our Engineering & Trading Team"
+        description="Get in touch with Raj Global Ventures. Discuss custom trading system development, low-latency architecture consulting, or TradingFootprint early beta access."
+        canonical="/contact"
+        keywords="contact Raj Global Ventures, trading engineering inquiry, trading software consultation, Tirunelveli"
+      />
+      <section className="w-full bg-canvas py-16 md:py-24" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
           <p className="text-sm font-medium text-brand">Contact</p>
@@ -140,6 +148,8 @@ export function Contact() {
           </aside>
         </div>
       </div>
-    </section>);
+    </section>
+    </>
+  );
 
 }

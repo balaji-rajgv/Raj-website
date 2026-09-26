@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import { ShieldCheckIcon, LockIcon, ArrowLeftIcon, FileTextIcon } from "lucide-react";
 import { companyName, contactDetails } from "../data/contact";
 import { FinalCta } from "../components/FinalCta";
+import { SEO } from "../components/SEO";
 
 export function PrivacyPolicy() {
   return (
     <>
+      <SEO
+        title="Privacy Policy | Data Protection & Security"
+        description="Privacy policy and data governance practices at Raj Global Ventures. How we safeguard trader data, broker API credentials, and personal information."
+        canonical="/privacy"
+        keywords="privacy policy, data protection, broker credentials security, Raj Global Ventures"
+      />
       <section className="relative w-full overflow-hidden bg-canvas py-16 md:py-24" aria-labelledby="privacy-heading">
         {/* Decorative background light accents */}
         <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-brand/5 blur-3xl" aria-hidden="true" />

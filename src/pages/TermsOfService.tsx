@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import { FileTextIcon, AlertTriangleIcon, CheckCircle2Icon, ArrowLeftIcon, ScaleIcon } from "lucide-react";
 import { companyName, contactDetails } from "../data/contact";
 import { FinalCta } from "../components/FinalCta";
+import { SEO } from "../components/SEO";
 
 export function TermsOfService() {
   return (
     <>
+      <SEO
+        title="Terms of Service | Legal Agreement & Disclosures"
+        description="Terms of service, technology scope, intellectual property, and financial risk disclosures for Raj Global Ventures and TradingFootprint."
+        canonical="/terms"
+        keywords="terms of service, trading software legal terms, financial risk disclosures, Raj Global Ventures"
+      />
       <section className="relative w-full overflow-hidden bg-canvas py-16 md:py-24" aria-labelledby="terms-heading">
         {/* Subtle background glow */}
         <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-brand/5 blur-3xl" aria-hidden="true" />

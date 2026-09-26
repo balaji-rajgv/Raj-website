@@ -15,10 +15,18 @@ import { ProductSpotlight } from "../components/ProductSpotlight";
 import { FinalCta } from "../components/FinalCta";
 import { images } from "../data/images";
 import { features, betaPerks } from "../data/tradingFootprint";
+import { SEO } from "../components/SEO";
 
 export function TradingFootprint() {
   return (
     <>
+      <SEO
+        title="TradingFootprint | Multi-Asset Algo Trading Platform (Coming Soon)"
+        description="Trade what the order flow is telling you. TradingFootprint supports Options, Futures, Equity, and Commodities with 20+ broker connects, AI recommendations, live news, and footprint charts."
+        canonical="/products/tradingfootprint"
+        keywords="TradingFootprint, order flow trading, footprint charts, multi-asset algo, options trading software, futures trading, 20+ broker connects"
+        image="/ec15f097-a0d2-4707-8ff9-187017f132c4.jpg"
+      />
       <PageHero
         eyebrow="TradingFootprint · Multi-Asset Algo Platform · Coming Soon"
         title="Trade what the order flow is telling you across all markets"
@@ -204,9 +212,9 @@ export function TradingFootprint() {
                   </ul>
 
                   <div className="mt-6 rounded-xl bg-brand-soft/60 p-4 text-xs text-ink">
-                    <p className="font-semibold text-brand">Direct Founder Communication:</p>
+                    <p className="font-semibold text-brand">Direct Engineering Communication:</p>
                     <p className="mt-1 text-muted">
-                      Selected testers will have direct access to CEO &amp; Founder <strong>Giftson Raj</strong> and the core engineering team in Tirunelveli.
+                      Selected testers will have direct access to our core systems development and quantitative research desks in Tirunelveli.
                     </p>
                   </div>
                 </div>

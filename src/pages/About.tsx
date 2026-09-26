@@ -4,10 +4,17 @@ import { Stats } from "../components/Stats";
 import { FinalCta } from "../components/FinalCta";
 import { images } from "../data/images";
 import { milestones, offices, principles } from "../data/about";
+import { SEO } from "../components/SEO";
 
 export function About() {
   return (
     <>
+      <SEO
+        title="About Us | Engineers of the Modern Trading Stack"
+        description="Learn about Raj Global Ventures, established in 2025 in Tirunelveli by CEO & Founder Giftson Raj. We engineer low-latency trading software, 20+ broker connectors, and TradingFootprint."
+        canonical="/about"
+        keywords="About Raj Global Ventures, Giftson Raj, Tirunelveli trading technology, algorithmic engineering, trading stack"
+      />
       <PageHero
         eyebrow="About Raj Global Ventures"
         title="Engineers of the modern trading stack"

@@ -18,6 +18,7 @@ import {
   BookOpenIcon
 } from "lucide-react";
 import { FinalCta } from "../components/FinalCta";
+import { SEO } from "../components/SEO";
 
 export function Sitemap() {
   const sections = [
@@ -131,6 +132,12 @@ export function Sitemap() {
 
   return (
     <>
+      <SEO
+        title="Sitemap | Website Directory & Route Index"
+        description="Comprehensive sitemap and directory of all pages, products, services, research articles, and legal documents on Raj Global Ventures."
+        canonical="/sitemap"
+        keywords="sitemap, website directory, navigation index, Raj Global Ventures"
+      />
       <section className="relative w-full overflow-hidden bg-canvas py-16 md:py-24" aria-labelledby="sitemap-heading">
         {/* Subtle decorative background light */}
         <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-brand/5 blur-3xl" aria-hidden="true" />

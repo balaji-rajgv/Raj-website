@@ -5,10 +5,18 @@ import { Process } from "../components/Process";
 import { FinalCta } from "../components/FinalCta";
 import { images } from "../data/images";
 import { techStack } from "../data/servicesDetail";
+import { SEO } from "../components/SEO";
 
 export function Development() {
   return (
     <>
+      <SEO
+        title="Custom Trading Systems Development | Raj Global Ventures"
+        description="End-to-end custom trading systems engineering. Bespoke execution algorithms, ultra-fast tick-data ingestion pipelines, FIX protocol integration, and exchange connectivity."
+        canonical="/services/development"
+        keywords="custom trading software development, algorithmic trading engineering, FIX protocol engine, market data pipeline, Raj Global Ventures"
+        image="/aec77f68-04a6-4cff-b4db-228ce442729e.jpg"
+      />
       <PageHero
         eyebrow="Services · Development"
         title="Custom trading systems, engineered end to end"
