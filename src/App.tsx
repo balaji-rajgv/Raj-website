@@ -1,13 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { SiteLayout } from "./components/layout/SiteLayout";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { TradingFootprint } from "./pages/TradingFootprint";
-import { FinancialSolutions } from "./pages/FinancialSolutions";
-import { Development } from "./pages/Development";
-import { Consulting } from "./pages/Consulting";
+import { CrushedStone } from "./pages/CrushedStone";
+import { CustomizeSoftware } from "./pages/CustomizeSoftware";
 import { Contact } from "./pages/Contact";
 import { BetaApplication } from "./pages/BetaApplication";
 import { CookiesPolicy } from "./pages/CookiesPolicy";
@@ -26,10 +25,9 @@ export function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products/tradingfootprint" element={<TradingFootprint />} />
+          <Route path="/products/crushed-stone" element={<CrushedStone />} />
+          <Route path="/services/custom-software" element={<CustomizeSoftware />} />
           <Route path="/beta" element={<BetaApplication />} />
-          <Route path="/solutions/financial" element={<FinancialSolutions />} />
-          <Route path="/services/development" element={<Development />} />
-          <Route path="/services/consulting" element={<Consulting />} />
           <Route path="/resources" element={<Blogs />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:slug" element={<Blogs />} />
@@ -38,6 +36,12 @@ export function AppRoutes() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/sitemap" element={<Sitemap />} />
+
+          {/* Graceful redirects for removed pages */}
+          <Route path="/solutions/financial" element={<Navigate to="/products/tradingfootprint" replace />} />
+          <Route path="/services/development" element={<Navigate to="/services/custom-software" replace />} />
+          <Route path="/services/consulting" element={<Navigate to="/services/custom-software" replace />} />
+
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

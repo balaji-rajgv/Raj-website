@@ -13,6 +13,9 @@ import { PageHero } from "../components/PageHero";
 import { DashboardMockup } from "../components/DashboardMockup";
 import { ProductSpotlight } from "../components/ProductSpotlight";
 import { FinalCta } from "../components/FinalCta";
+import { VenueStrip } from "../components/VenueStrip";
+import { Process } from "../components/Process";
+import { Testimonial } from "../components/Testimonial";
 import { images } from "../data/images";
 import { features, betaPerks } from "../data/tradingFootprint";
 import { SEO } from "../components/SEO";
@@ -36,6 +39,7 @@ export function TradingFootprint() {
         primaryCta={{ label: "Get Beta Access", to: "/beta" }}
         secondaryCta={{ label: "Contact Us", to: "/contact" }}
       />
+      <VenueStrip />
 
       {/* Coming Soon & Beta Callout Banner */}
       <section className="border-y border-line bg-brand-soft/40 py-8" aria-label="Beta Announcement">
@@ -228,9 +232,17 @@ export function TradingFootprint() {
         </div>
       </section>
 
+      {/* Process Architecture */}
+      <Process />
+
+      {/* Trading Community & Testimonials */}
+      <Testimonial />
+
       <FinalCta
         title="Ready to trade the markets with order flow intelligence?"
         description="Submit your beta application or reach out to our systems team in Tirunelveli, Tamil Nadu."
+        primaryCta={{ label: "Get Beta Access", to: "/beta" }}
+        secondaryCta={{ label: "Contact Engineering", to: "/contact" }}
       />
     </>
   );

@@ -3,19 +3,18 @@ import { Link } from "react-router-dom";
 import {
   CompassIcon,
   ArrowRightIcon,
-  ArrowLeftIcon,
   HomeIcon,
   InfoIcon,
   MailIcon,
   LineChartIcon,
   SparklesIcon,
-  LandmarkIcon,
-  CodeIcon,
+  Code2Icon,
   ShieldCheckIcon,
   ScaleIcon,
   CookieIcon,
   MapIcon,
-  BookOpenIcon
+  BookOpenIcon,
+  MountainIcon
 } from "lucide-react";
 import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";
@@ -28,25 +27,25 @@ export function Sitemap() {
         {
           title: "Home",
           href: "/",
-          description: "Main portal, multi-asset market coverage, interactive terminal mockup, and core services.",
+          description: "Raj Global Ventures - Three Generations. One Vision: Solving What Matters.",
           icon: HomeIcon
         },
         {
           title: "About Us",
           href: "/about",
-          description: "Our story, Tirunelveli headquarters, 2025 founding milestones, and engineering principles.",
+          description: "Our story, Tirunelveli headquarters, principles, milestones, and three generations of experience.",
           icon: InfoIcon
         },
         {
           title: "Contact",
           href: "/contact",
-          description: "Direct inquiry form, contact phone, and technical architecture consultation requests.",
+          description: "Direct inquiry form for personal and business requirements, working hours, and holiday schedule.",
           icon: MailIcon
         }
       ]
     },
     {
-      category: "Products & Early Access",
+      category: "Products & Solutions",
       links: [
         {
           title: "TradingFootprint",
@@ -56,46 +55,41 @@ export function Sitemap() {
           icon: LineChartIcon
         },
         {
+          title: "Crushed Stone Aggregates",
+          href: "/products/crushed-stone",
+          badge: "Quarry Direct",
+          description: "High-grade blue metal aggregates (10mm, 20mm, 40mm), M-Sand, P-Sand, and road sub-base.",
+          icon: MountainIcon
+        }
+      ]
+    },
+    {
+      category: "Services",
+      links: [
+        {
+          title: "Customize Software Solution",
+          href: "/services/custom-software",
+          description: "Tailored enterprise software, business process automation, API integrations, and cloud platforms.",
+          icon: Code2Icon
+        }
+      ]
+    },
+    {
+      category: "Resources",
+      links: [
+        {
+          title: "Blogs & Insights",
+          href: "/blogs",
+          badge: "Coming Soon",
+          description: "Technical breakdowns, engineering case studies, and business perspectives.",
+          icon: BookOpenIcon
+        },
+        {
           title: "Early Beta Access",
           href: "/beta",
           badge: "Open",
-          description: "Application and qualification questionnaire for active traders seeking early beta slots.",
+          description: "Application questionnaire for active traders seeking early beta slots on TradingFootprint.",
           icon: SparklesIcon
-        }
-      ]
-    },
-    {
-      category: "Resources & Insights",
-      links: [
-        {
-          title: "Blogs & Technical Insights",
-          href: "/blogs",
-          badge: "New",
-          description: "In-depth engineering articles, footprint chart breakdowns, and quantitative market research.",
-          icon: BookOpenIcon
-        }
-      ]
-    },
-    {
-      category: "Solutions & Engineering Services",
-      links: [
-        {
-          title: "Financial Solutions",
-          href: "/solutions/financial",
-          description: "Trading infrastructure for brokers, institutional funds, and proprietary trading desks.",
-          icon: LandmarkIcon
-        },
-        {
-          title: "Custom Development",
-          href: "/services/development",
-          description: "Bespoke execution algorithms, tick capture engines, and FIX/API broker gateways.",
-          icon: CodeIcon
-        },
-        {
-          title: "Consulting & Reviews",
-          href: "/services/consulting",
-          description: "Latency profiling, microstructure reviews, and exchange certification advisory.",
-          icon: CompassIcon
         }
       ]
     },
@@ -105,25 +99,25 @@ export function Sitemap() {
         {
           title: "Privacy Policy",
           href: "/privacy",
-          description: "How we protect personal information, broker API credentials, and client confidentiality.",
+          description: "Information regarding user data collection, storage, and processing policies.",
           icon: ShieldCheckIcon
         },
         {
           title: "Terms of Service",
           href: "/terms",
-          description: "Legal terms governing platform usage, technology scope, and financial risk disclosures.",
+          description: "Terms and conditions governing our platforms, services, and software delivery.",
           icon: ScaleIcon
         },
         {
           title: "Cookies Policy",
           href: "/cookies",
-          description: "Overview of cookies, local cache memory, and interactive preference controls.",
+          description: "Clear information about browser cookies and visitor privacy choices.",
           icon: CookieIcon
         },
         {
           title: "Sitemap",
           href: "/sitemap",
-          description: "Full directory index of all public web pages and services.",
+          description: "Complete indexed tree of all publicly accessible URLs across our web presence.",
           icon: MapIcon
         }
       ]
@@ -133,72 +127,69 @@ export function Sitemap() {
   return (
     <>
       <SEO
-        title="Sitemap | Website Directory & Route Index"
-        description="Comprehensive sitemap and directory of all pages, products, services, research articles, and legal documents on Raj Global Ventures."
+        title="HTML Sitemap | Raj Global Ventures"
+        description="Index of all pages, products, services, and resources on the Raj Global Ventures website."
         canonical="/sitemap"
-        keywords="sitemap, website directory, navigation index, Raj Global Ventures"
+        keywords="Raj Global Ventures sitemap, TradingFootprint, crushed stone, customize software, Tirunelveli"
       />
-      <section className="relative w-full overflow-hidden bg-canvas py-16 md:py-24" aria-labelledby="sitemap-heading">
-        {/* Subtle decorative background light */}
-        <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-brand/5 blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute -right-20 top-40 h-96 w-96 rounded-full bg-sun/5 blur-3xl" aria-hidden="true" />
 
-        <div className="relative mx-auto max-w-5xl px-6">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-muted transition-colors hover:text-ink">
-            <ArrowLeftIcon className="h-3.5 w-3.5" />
-            Back to Home
-          </Link>
-
-          <header className="mt-6 border-b border-line pb-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-1 text-xs font-medium text-brand shadow-sm">
+      <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
               <CompassIcon className="h-3.5 w-3.5" />
-              <span>Website Directory</span>
-            </div>
-            <h1 id="sitemap-heading" className="mt-4 text-4xl font-semibold tracking-tight text-ink md:text-5xl">
-              Sitemap
+              SITE NAVIGATION
+            </span>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink md:text-5xl lg:text-6xl">
+              Website Index &amp; Structure
             </h1>
-            <p className="mt-4 text-base leading-relaxed text-muted">
-              Quickly find any page, product showcase, service detail, or legal document across the Raj Global Ventures platform.
+            <p className="mt-5 text-lg leading-relaxed text-muted md:text-xl">
+              Quickly find any product, service, legal documentation, or company resource across Raj Global Ventures.
             </p>
-          </header>
+          </div>
+        </div>
+      </section>
 
-          <div className="mt-12 space-y-12">
+      <section className="w-full bg-white py-16 md:py-24" aria-labelledby="sitemap-grid-heading">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 id="sitemap-grid-heading" className="sr-only">Directory Pages</h2>
+          <div className="space-y-16">
             {sections.map((sec) => (
               <div key={sec.category}>
-                <h2 className="text-xs font-semibold uppercase tracking-wider text-brand">
-                  {sec.category}
-                </h2>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  {sec.links.map((item) => {
-                    const Icon = item.icon;
+                <div className="flex items-center gap-3 border-b border-line pb-4">
+                  <h3 className="text-xl font-semibold tracking-tight text-ink">{sec.category}</h3>
+                  <span className="text-xs text-muted">({sec.links.length} pages)</span>
+                </div>
+                <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {sec.links.map((link) => {
+                    const Icon = link.icon;
                     return (
                       <Link
-                        key={item.href}
-                        to={item.href}
-                        className="group flex items-start gap-4 rounded-2xl border border-line bg-white p-5 shadow-sm transition-all duration-150 hover:border-ink/40 hover:shadow-md">
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand transition-colors group-hover:bg-brand group-hover:text-white">
-                          <Icon className="h-5 w-5" />
-                        </span>
-                        <div className="flex-1">
+                        key={link.title}
+                        to={link.href}
+                        className="group flex flex-col justify-between rounded-2xl border border-line bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-ink/40 hover:shadow-md"
+                      >
+                        <div>
                           <div className="flex items-center justify-between">
-                            <h3 className="text-base font-semibold text-ink transition-colors group-hover:text-brand">
-                              {item.title}
-                            </h3>
-                            {item.badge && (
-                              <span className="rounded-full bg-sun/20 px-2 py-0.5 text-[10px] font-semibold text-ink">
-                                {item.badge}
+                            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-soft text-brand">
+                              <Icon className="h-5 w-5" />
+                            </span>
+                            {link.badge && (
+                              <span className="rounded-full bg-brand-soft px-2.5 py-0.5 text-[11px] font-semibold text-brand">
+                                {link.badge}
                               </span>
                             )}
                           </div>
-                          <p className="mt-1 text-xs leading-relaxed text-muted">
-                            {item.description}
+                          <h4 className="mt-4 text-base font-semibold text-ink group-hover:text-brand">
+                            {link.title}
+                          </h4>
+                          <p className="mt-1.5 text-xs leading-relaxed text-muted">
+                            {link.description}
                           </p>
-                          <span className="mt-2.5 inline-flex items-center gap-1 font-mono text-[11px] text-brand">
-                            {item.href}
-                            <ArrowRightIcon className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-                          </span>
+                        </div>
+                        <div className="mt-6 flex items-center gap-1 text-xs font-semibold text-ink group-hover:text-brand">
+                          <span>Visit page</span>
+                          <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                         </div>
                       </Link>
                     );
@@ -211,8 +202,9 @@ export function Sitemap() {
       </section>
 
       <FinalCta
-        title="Looking for something specific?"
-        description="Our team in Tirunelveli, Tamil Nadu is happy to answer any questions or discuss custom requirements."
+        title="Let's Build What's Next"
+        subtitle="Creating opportunities. Building lasting value."
+        description="Connect with Raj Global Ventures to explore strategic opportunities, partnerships, and new possibilities for sustainable growth."
       />
     </>
   );

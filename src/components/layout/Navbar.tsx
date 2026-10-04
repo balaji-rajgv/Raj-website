@@ -104,11 +104,6 @@ export function Navbar() {
         {/* Right: Actions */}
         <div className="hidden items-center justify-end gap-3 lg:flex lg:flex-1">
           <Link
-            to="/beta"
-            className="inline-flex items-center whitespace-nowrap rounded-lg border border-line bg-white px-4 py-2 text-sm font-medium text-ink transition-colors duration-150 hover:border-ink hover:text-brand">
-            Get Beta Access
-          </Link>
-          <Link
             to="/contact"
             className="inline-flex whitespace-nowrap rounded-lg bg-ink px-5 py-2.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-brand">
             Contact Us
@@ -160,11 +155,6 @@ export function Navbar() {
                 </div>
             )}
               <div className="space-y-2 pt-2">
-                <Link
-                  to="/beta"
-                  className="block rounded-lg border border-line bg-white px-5 py-3 text-center text-sm font-medium text-ink">
-                  Get Beta Access
-                </Link>
                 <Link
                   to="/contact"
                   className="block rounded-lg bg-ink px-5 py-3 text-center text-sm font-medium text-white">

@@ -1,4 +1,4 @@
-import { InfoIcon, LineChartIcon, LandmarkIcon, CodeIcon, CompassIcon, BookOpenIcon } from "lucide-react";
+import { InfoIcon, LineChartIcon, MountainIcon, Code2Icon, BookOpenIcon, SparklesIcon } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export type NavLink = {
@@ -19,7 +19,12 @@ export const navItems: NavItem[] = [
   {
     label: "Company",
     links: [
-      { title: "About Us", description: "Our story, principles and milestones", href: "/about", icon: InfoIcon }
+      {
+        title: "About Us",
+        description: "Three generations of business experience, our principles and journey",
+        href: "/about",
+        icon: InfoIcon
+      }
     ]
   },
   {
@@ -33,28 +38,39 @@ export const navItems: NavItem[] = [
         badge: "Coming Soon"
       },
       {
-        title: "Financial Solutions",
-        description: "Trading infrastructure for brokers, funds and prop firms",
-        href: "/solutions/financial",
-        icon: LandmarkIcon
+        title: "Crushed Stone",
+        description: "High-grade blue metal aggregates, M-Sand, and road sub-base materials",
+        href: "/products/crushed-stone",
+        icon: MountainIcon
       }
     ]
   },
   {
     label: "Services",
     links: [
-      { title: "Development", description: "Custom trading systems, built end to end", href: "/services/development", icon: CodeIcon },
-      { title: "Consulting", description: "Architecture, latency and compliance reviews", href: "/services/consulting", icon: CompassIcon }
+      {
+        title: "Customize Software Solution",
+        description: "Tailored enterprise software, workflow automation, and custom web apps",
+        href: "/services/custom-software",
+        icon: Code2Icon
+      }
     ]
   },
   {
     label: "Resources",
     links: [
       {
-        title: "Blogs",
-        description: "Technical articles, trading breakdowns, and market insights",
+        title: "Blogs & Insights",
+        description: "Industry perspectives, technology updates, and business insights",
         href: "/blogs",
         icon: BookOpenIcon
+      },
+      {
+        title: "Get Beta Access",
+        description: "Early questionnaire & beta testing program for TradingFootprint",
+        href: "/beta",
+        icon: SparklesIcon,
+        badge: "Open"
       }
     ]
   },
@@ -72,15 +88,14 @@ export const footerColumns = [
   {
     title: "Products & Solutions",
     links: [
-      { label: "TradingFootprint (Coming Soon)", href: "/products/tradingfootprint" },
-      { label: "Financial Solutions", href: "/solutions/financial" }
+      { label: "Tradingfootprint", href: "/products/tradingfootprint" },
+      { label: "Crushed stone", href: "/products/crushed-stone" }
     ]
   },
   {
     title: "Services",
     links: [
-      { label: "Development", href: "/services/development" },
-      { label: "Consulting", href: "/services/consulting" }
+      { label: "Customize software solution", href: "/services/custom-software" }
     ]
   },
   {

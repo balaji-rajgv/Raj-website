@@ -1,15 +1,20 @@
+export const principlesHeading = "Three principles that define how we build, solve, and deliver.";
+
 export const principles = [
   {
-    title: "Measure before we build",
-    description: "Every design decision starts from latency budgets, fill data and market microstructure — not generic templates."
+    title: "Start with Real-World Needs",
+    description:
+      "We begin by understanding the challenges, objectives, and opportunities that matter to the businesses and people we serve. Rather than relying on assumptions or one-size-fits-all approaches, we develop solutions grounded in real requirements and practical outcomes."
   },
   {
-    title: "Research must match reality",
-    description: "If a backtest cannot be reproduced live across Options, Futures or Equities, it is not evidence. We model queues, slippage and broker limits by default."
+    title: "Turn Research into Practical Solutions",
+    description:
+      "Strong ideas create value only when they work in the real world. Our approach combines research, analysis, technology, and practical validation to develop solutions that are reliable, scalable, and aligned with evolving business needs."
   },
   {
-    title: "You own what we build",
-    description: "Source code, runbooks and documentation are yours. We stay because we provide continuous edge, not because you're locked in."
+    title: "Build with Transparency and Control",
+    description:
+      "Trust is built through clarity. We maintain transparent processes, clear documentation, and well-defined solutions so our clients and partners can understand how things work, make informed decisions, and maintain control throughout the journey."
   }
 ];
 
@@ -17,27 +22,27 @@ export const milestones = [
   {
     year: "Early 2025",
     title: "Founded in Tirunelveli, Tamil Nadu",
-    description: "Established by CEO & Founder Giftson Raj with a mission to engineer high-throughput trading systems and execution infrastructure."
+    description: "Established by CEO & Founder Giftson Raj, building on a multi-generational business legacy to deliver high-impact enterprise solutions."
   },
   {
     year: "2025",
-    title: "Team Expansion & Architecture",
-    description: "Expanded our core engineering and quant systems team in Tirunelveli, architecting connectivity across 20+ brokers for Options, Futures, Equity, and Commodities."
+    title: "Team Expansion & Infrastructure",
+    description: "Expanded core engineering and domain teams in Tirunelveli, architecting scalable technological platforms and operational foundations."
   },
   {
     year: "H1 2026",
     title: "Platform Development Commenced",
-    description: "Started active engineering on TradingFootprint in the first half of 2026, integrating AI-assisted recommendations, live financial news, and real-time market order flow."
+    description: "Started active engineering on TradingFootprint, integrating AI-assisted recommendations, live market insights, and order flow charts."
   },
   {
     year: "Late 2026",
-    title: "Beta Access Rollout",
-    description: "Targeting early Beta access rollout by the end of 2026 for selected active traders and institutional desks."
+    title: "Beta Access & Solution Rollout",
+    description: "Targeting early Beta access rollout for selected users and partners while expanding enterprise software services."
   }
 ];
 
 export const offices = [
-  { city: "Tirunelveli, Tamil Nadu", role: "Headquarters & Core Systems Engineering" },
-  { city: "Chennai, Tamil Nadu", role: "Quantitative Research & Operations" },
-  { city: "Global Connectivity", role: "Integrated with 20+ domestic & global brokers" }
+  { city: "Tirunelveli, Tamil Nadu", role: "Headquarters & Core Operations" },
+  { city: "Tamil Nadu, India", role: "Aggregates, Infrastructure & Regional Logistics" },
+  { city: "Global Presence", role: "Digital Platform Connectivity & Enterprise Solutions" }
 ];
