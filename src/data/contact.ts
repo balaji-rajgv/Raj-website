@@ -19,6 +19,33 @@ export const contactDetails = {
   hours: "Mon–Fri, 9:00 AM – 4:00 PM IST"
 };
 
+export const socialLinks = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/raj-global-ventures-407813441",
+    handle: "raj-global-ventures-407813441",
+    label: "Follow Raj Global Ventures on LinkedIn"
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/raj_globalventures/",
+    handle: "@raj_globalventures",
+    label: "Follow Raj Global Ventures on Instagram"
+  },
+  {
+    name: "X",
+    href: "https://x.com/raj_globalv",
+    handle: "@raj_globalv",
+    label: "Follow Raj Global Ventures on X"
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@Raj_globalventures",
+    handle: "@Raj_globalventures",
+    label: "Subscribe to Raj Global Ventures on YouTube"
+  }
+];
+
 export const weeklySchedule = [
   { day: "Monday", hours: "9:00 AM – 4:00 PM", status: "open" },
   { day: "Tuesday", hours: "9:00 AM – 4:00 PM", status: "open" },

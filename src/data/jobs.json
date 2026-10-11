@@ -1,0 +1,214 @@
+[
+  {
+    "id": "software-engineering-intern",
+    "vrCode": "RGV-SEI-2026",
+    "title": "General Software Engineering Intern",
+    "department": "Engineering",
+    "team": "Core Software Systems",
+    "location": "Remote",
+    "workMode": "Remote",
+    "type": "Internship · Remote",
+    "duration": "3–6 Months",
+    "compensation": "Internship",
+    "eligibility": "Pre-final-year and final-year students",
+    "opportunity": "Based on performance during the internship, candidates may be offered a permanent full-time position.",
+    "summary": "Looking for passionate students to solve real-world problems and drive business growth through practical software engineering across our core platforms.",
+    "aboutRole": "Join our engineering team to solve meaningful problems and drive real business outcomes. As a General Software Engineering Intern at Raj Global Ventures, you will collaborate with experienced developers to build scalable features, automate workflows, and create high-value digital experiences.",
+    "skills": ["Problem Solving", "Java / TypeScript / Python", "Data Structures", "REST APIs", "Git", "Continuous Learning"],
+    "responsibilities": [
+      "Collaborate with senior developers to design, develop, and test software solutions across our products.",
+      "Write clean, maintainable, and well-documented code adhering to modern engineering best practices.",
+      "Diagnose technical issues, implement bug fixes, and participate in code reviews.",
+      "Help build and optimize REST APIs, internal tools, and responsive user interfaces.",
+      "Demonstrate active curiosity and passion to solve complex problems that drive tangible business value."
+    ],
+    "requirements": [
+      "Eligibility: Pre-final-year and final-year college/university students pursuing a degree in Computer Science, IT, Engineering, or a related field.",
+      "Strong passion for solving problems and understanding how technology drives real business impact.",
+      "Solid understanding of computer science fundamentals, data structures, and algorithms.",
+      "Familiarity with at least one programming language (Java, TypeScript/JavaScript, Python, Dart, or C++).",
+      "Basic familiarity with Git version control and RESTful architecture.",
+      "Strong communication skills, proactive attitude, and eagerness to learn."
+    ],
+    "preferredSkills": [
+      "Experience with modern web frameworks (React, Next.js) or backend services.",
+      "Familiarity with relational databases (SQL, PostgreSQL) or cloud services.",
+      "Hands-on academic or personal projects demonstrating independent coding ability."
+    ],
+    "contactEmail": "hr@rajgv.com",
+    "contactPhone": "9865798157",
+    "highlights": [
+      "Remote Work",
+      "Full-Time Conversion Opportunity",
+      "Direct Mentorship",
+      "Problem-Solving Focus"
+    ]
+  },
+  {
+    "id": "java-backend-developer-intern",
+    "vrCode": "RGV-JBD-2026",
+    "title": "Java Backend Developer Intern",
+    "department": "Engineering",
+    "team": "Backend & Distributed Infrastructure",
+    "location": "Remote",
+    "workMode": "Remote",
+    "type": "Internship · Remote",
+    "duration": "3–6 / 6–12 Months",
+    "compensation": "Internship",
+    "eligibility": "Pre-Final-Year & Final-Year Students",
+    "opportunity": "Potential full-time opportunity based on performance and business requirements.",
+    "summary": "Looking for motivated students to gain practical experience in Java backend development, database management, API integration, and distributed systems.",
+    "aboutRole": "Looking for motivated students to gain practical experience in Java backend development, database management, API integration, and distributed systems. Potential full-time opportunity based on performance and business requirements.",
+    "skills": ["Java", "SQL / PostgreSQL", "Spring Boot", "Apache Kafka", "Redis", "REST APIs"],
+    "responsibilities": [
+      "Develop and maintain backend applications and microservices using Java.",
+      "Work with PostgreSQL databases and design efficient REST APIs.",
+      "Learn and implement Kafka messaging and Redis caching for distributed workloads.",
+      "Debug backend issues, write unit tests, and collaborate closely with the core development team.",
+      "Analyze query performance and contribute to data pipeline reliability."
+    ],
+    "requirements": [
+      "Eligibility: Pre-Final-Year & Final-Year Students pursuing a degree in Computer Science, IT, or a related field.",
+      "Basic knowledge of Java programming and relational database concepts (SQL).",
+      "Familiarity with Git version control and REST APIs.",
+      "Strong desire to solve real-world backend challenges and drive business efficiency."
+    ],
+    "preferredSkills": [
+      "Spring Boot framework fundamentals.",
+      "Apache Kafka message brokers.",
+      "Redis in-memory caching.",
+      "PostgreSQL query optimization and schema design.",
+      "Willingness to learn Kafka, Redis, and Spring Boot rapidly on live projects.",
+      "Good problem-solving and communication skills."
+    ],
+    "contactEmail": "hr@rajgv.com",
+    "contactPhone": "9865798157",
+    "highlights": [
+      "Remote Work",
+      "Distributed Systems & Kafka",
+      "PostgreSQL Optimization",
+      "PPO / Full-Time Potential"
+    ]
+  },
+  {
+    "id": "flutter-developer-intern",
+    "vrCode": "RGV-FLI-2026",
+    "title": "Flutter Developer Intern",
+    "department": "Engineering",
+    "team": "Mobile & Cross-Platform Applications",
+    "location": "Remote",
+    "workMode": "Remote",
+    "type": "Internship · Remote",
+    "duration": "3–6 Months",
+    "compensation": "Internship",
+    "eligibility": "Pre-final-year and final-year college students",
+    "opportunity": "Based on performance during the internship, candidates may be offered a permanent full-time position.",
+    "summary": "Looking for passionate college students with strong computer science fundamentals to develop cross-platform mobile and web applications using Flutter and Dart.",
+    "aboutRole": "We are seeking motivated college students eager to gain practical, production-level experience in Flutter and Dart development. In this role, you will collaborate with our engineering team to build responsive cross-platform interfaces, implement client-side application logic, integrate RESTful APIs, and practice clean code and version control in an active engineering environment.",
+    "skills": [
+      "Flutter & Dart",
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming (OOP)",
+      "State Management (Provider / Bloc / Riverpod)",
+      "RESTful APIs & JSON Serialization",
+      "Git & GitHub Workflows",
+      "Responsive Layouts & Material UI",
+      "Asynchronous Programming (async/await, Futures)"
+    ],
+    "responsibilities": [
+      "Develop and maintain cross-platform user interfaces for mobile (Android & iOS) and web using Flutter and Dart.",
+      "Integrate REST APIs, handle JSON serialization, and manage asynchronous client-side data flows.",
+      "Write modular, clean, and reusable widget components adhering to Flutter best practices and design standards.",
+      "Apply core Computer Science concepts (OOP, data structures, algorithms, and clean architecture) to write maintainable code.",
+      "Participate in peer code reviews, debug layout issues, and profile app behavior using Flutter DevTools.",
+      "Implement local state management using modern Flutter solutions (Bloc, Riverpod, or Provider)."
+    ],
+    "requirements": [
+      "Eligibility: Pre-final-year and final-year students pursuing B.E., B.Tech, BCA, MCA, or M.Sc. in Computer Science, IT, or related technical disciplines.",
+      "Solid foundation in Computer Science fundamentals: Object-Oriented Programming (OOP), Data Structures, Algorithms, and software design concepts.",
+      "Working knowledge of Dart and the Flutter framework demonstrated through academic projects, personal apps, or open-source contributions.",
+      "Understanding of asynchronous programming in Dart (async/await, Futures, Streams).",
+      "Familiarity with consuming REST APIs using HTTP packages (e.g., http or dio) and parsing JSON responses.",
+      "Basic understanding of Git for version control and collaborative branching.",
+      "Good problem-solving mindset, logical reasoning, and enthusiasm to learn modern software engineering practices."
+    ],
+    "preferredSkills": [
+      "Working knowledge of state management libraries such as Bloc/Cubit, Riverpod, or Provider.",
+      "Experience with local storage and caching (SharedPreferences, Hive, or SQLite / sqflite).",
+      "Familiarity with writing basic unit tests or widget tests in Flutter.",
+      "Active GitHub profile showcasing Flutter projects or personal app deployments."
+    ],
+    "contactEmail": "hr@rajgv.com",
+    "contactPhone": "9865798157",
+    "highlights": [
+      "Remote Work",
+      "Full-Time Conversion Opportunity",
+      "Hands-on Production Codebase",
+      "Engineering Mentorship"
+    ]
+  },
+  {
+    "id": "flutter-developer",
+    "vrCode": "RGV-FLD-2026",
+    "title": "Flutter Developer (2+ Years Experience)",
+    "department": "Engineering",
+    "team": "Mobile & Cross-Platform Applications",
+    "location": "Remote",
+    "workMode": "Remote",
+    "type": "Full-Time · Remote",
+    "duration": "Permanent / Full-Time",
+    "compensation": "Competitive Industry Standard",
+    "eligibility": "2+ Years of professional production experience in Flutter & Dart",
+    "opportunity": "Long-term core engineering role with high autonomy, architectural ownership, and career advancement.",
+    "summary": "Seeking an experienced Flutter Developer with 2+ years of production experience to architect, build, and optimize scalable, high-performance cross-platform applications.",
+    "aboutRole": "We are looking for an experienced Flutter Developer with a solid computer science background and at least 2 years of hands-on production experience. In this role, you will be responsible for architecting scalable cross-platform applications across Android, iOS, and Web. You will establish clean design patterns (Clean Architecture, SOLID, BLoC/Riverpod), optimize app rendering and memory efficiency, integrate complex REST and WebSocket APIs, and build modular, testable features with high engineering quality.",
+    "skills": [
+      "Flutter SDK & Dart 3",
+      "Clean Architecture & SOLID Principles",
+      "Advanced State Management (BLoC / Riverpod)",
+      "RESTful APIs, WebSockets & Network Caching",
+      "Performance Profiling & Memory Optimization",
+      "Offline-First Architecture & Databases (Hive / SQLite / Isar)",
+      "Platform Channels (MethodChannel / Kotlin / Swift)",
+      "Unit, Widget & Integration Testing",
+      "CI/CD Pipelines (GitHub Actions / Fastlane)",
+      "Custom Widgets & RenderObject / CustomPainter",
+      "Data Structures & Algorithmic Efficiency"
+    ],
+    "responsibilities": [
+      "Architect, develop, and maintain robust, high-performance cross-platform applications targeting Android, iOS, and Web.",
+      "Enforce clean code principles, SOLID design paradigms, and scalable architecture (Clean Architecture / Domain-Driven Design).",
+      "Implement resilient state management using BLoC or Riverpod with clear separation of UI, business logic, and data layers.",
+      "Build reliable networking and data synchronization mechanisms handling offline persistence, caching, and WebSocket connections.",
+      "Profile and resolve performance bottlenecks, memory leaks, build rebuild cascades, and frame drops using Flutter DevTools.",
+      "Write unit, widget, and integration tests to ensure code quality, regression safety, and high coverage.",
+      "Create custom UI components, complex animations, and responsive layouts that adapt smoothly across diverse device screen sizes.",
+      "Collaborate on technical specifications, lead code reviews, and guide junior engineers."
+    ],
+    "requirements": [
+      "Minimum 2+ years of professional software engineering experience developing and shipping production Flutter applications.",
+      "Strong Computer Science degree or equivalent foundation: data structures, algorithms, object-oriented design, and design patterns.",
+      "Deep expertise in Dart (null-safety, asynchronous programming, streams, generics, isolates, and memory management).",
+      "Demonstrated mastery of production state management (BLoC/Cubit or Riverpod).",
+      "Extensive experience integrating RESTful web services, handling network errors, authentication tokens, and serialization.",
+      "Experience with offline data persistence using relational (SQLite/drift) or NoSQL (Hive/Isar) local databases.",
+      "Proficiency with Flutter DevTools for CPU profiling, memory allocation inspection, and network tracking.",
+      "Familiarity with Git branching workflows (GitFlow, trunk-based development) and pull request code reviews."
+    ],
+    "preferredSkills": [
+      "Experience with native platform integration via MethodChannels for Android (Kotlin/Java) or iOS (Swift/Objective-C).",
+      "Experience setting up CI/CD pipelines (GitHub Actions, Fastlane, Codemagic) for automated builds and testing.",
+      "Published apps on Google Play Store or Apple App Store with demonstrated user traction.",
+      "Experience with CustomPainter, low-level canvas rendering, and complex fluid UI animations.",
+      "Knowledge of app security best practices (secure storage, SSL pinning, obfuscation)."
+    ],
+    "contactEmail": "hr@rajgv.com",
+    "contactPhone": "9865798157",
+    "highlights": [
+      "Remote Work",
+      "High Engineering Autonomy",
+      "Clean Architecture Focus",
+      "Production Scale Impact"
+    ]
+  }
+]

@@ -2,21 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   BookOpenIcon,
-  SearchIcon,
-  XIcon,
   SparklesIcon,
   ArrowRightIcon,
   ClockIcon,
   CheckCircle2Icon,
   BellIcon
 } from "lucide-react";
-import { blogCategories } from "../data/blogs";
 import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";
 
 export function Blogs() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [subscribedEmail, setSubscribedEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -36,7 +31,7 @@ export function Blogs() {
         keywords="Raj Global Ventures blog, trading systems research, technology insights, Tirunelveli"
       />
 
-      {/* Hero Section - Same template & layout */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
@@ -53,7 +48,7 @@ export function Blogs() {
               </p>
             </div>
 
-            {/* Early Beta Access Button (PDF Page 5) */}
+            {/* Early Beta Access Button */}
             <div className="shrink-0">
               <Link
                 to="/beta"
@@ -65,51 +60,10 @@ export function Blogs() {
               </Link>
             </div>
           </div>
-
-          {/* Search & Category Filter Controls (Preserved Template Layout) */}
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-wrap items-center gap-2">
-              {blogCategories.map((category) => (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => setSelectedCategory(category)}
-                  className={`rounded-lg px-4 py-2 text-xs font-medium transition-colors duration-150 ${
-                    selectedCategory === category
-                      ? "bg-ink text-white"
-                      : "border border-line bg-white text-muted hover:border-ink hover:text-ink"
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            {/* Search Input */}
-            <div className="relative w-full sm:w-72">
-              <SearchIcon className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
-              <input
-                type="text"
-                placeholder="Search articles &amp; topics..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full rounded-lg border border-line bg-white py-2 pl-10 pr-4 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
-              />
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-ink"
-                >
-                  <XIcon className="h-4 w-4" />
-                </button>
-              )}
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Main Content Area - Status Clearly Indicated as "Coming Soon / No content available" */}
+      {/* Main Content Area - Status Clearly Indicated as Coming Soon */}
       <section className="w-full bg-white py-20 md:py-28" aria-label="Articles Status">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-2xl rounded-3xl border border-line bg-canvas p-8 text-center shadow-sm md:p-14">

@@ -14,7 +14,8 @@ import {
   CookieIcon,
   MapIcon,
   BookOpenIcon,
-  MountainIcon
+  MountainIcon,
+  BriefcaseIcon
 } from "lucide-react";
 import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";
@@ -35,6 +36,12 @@ export function Sitemap() {
           href: "/about",
           description: "Our story, Tirunelveli headquarters, principles, milestones, and three generations of experience.",
           icon: InfoIcon
+        },
+        {
+          title: "Careers",
+          href: "/careers",
+          description: "Join our team in Tirunelveli across engineering, quant research, product design, and operations.",
+          icon: BriefcaseIcon
         },
         {
           title: "Contact",

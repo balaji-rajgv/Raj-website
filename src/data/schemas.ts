@@ -64,8 +64,10 @@ export const homePageSchemas = {
         }
       ],
       "sameAs": [
-        "https://www.linkedin.com/company/raj-global-ventures",
-        "https://twitter.com/rajglobalventures"
+        "https://www.linkedin.com/in/raj-global-ventures-407813441",
+        "https://www.instagram.com/raj_globalventures/",
+        "https://x.com/raj_globalv",
+        "https://www.youtube.com/@Raj_globalventures"
       ]
     },
 

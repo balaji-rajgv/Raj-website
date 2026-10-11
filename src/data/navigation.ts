@@ -1,4 +1,4 @@
-import { InfoIcon, LineChartIcon, MountainIcon, Code2Icon, BookOpenIcon, SparklesIcon } from "lucide-react";
+import { InfoIcon, LineChartIcon, MountainIcon, Code2Icon, BookOpenIcon, SparklesIcon, BriefcaseIcon } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export type NavLink = {
@@ -16,17 +16,6 @@ export type NavItem = {
 };
 
 export const navItems: NavItem[] = [
-  {
-    label: "Company",
-    links: [
-      {
-        title: "About Us",
-        description: "Three generations of business experience, our principles and journey",
-        href: "/about",
-        icon: InfoIcon
-      }
-    ]
-  },
   {
     label: "Products & Solutions",
     links: [
@@ -74,7 +63,18 @@ export const navItems: NavItem[] = [
       }
     ]
   },
-  { label: "Contact", href: "/contact" }
+  {
+    label: "Company",
+    links: [
+      {
+        title: "About Us",
+        description: "Three generations of business experience, our principles and journey",
+        href: "/about",
+        icon: InfoIcon
+      }
+    ]
+  },
+  { label: "Careers", href: "/careers" }
 ];
 
 export const footerColumns = [
@@ -82,6 +82,7 @@ export const footerColumns = [
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
+      { label: "Careers", href: "/careers" },
       { label: "Cookies Policy", href: "/cookies" }
     ]
   },

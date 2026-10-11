@@ -14,6 +14,8 @@ import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { TermsOfService } from "./pages/TermsOfService";
 import { Sitemap } from "./pages/Sitemap";
 import { Blogs } from "./pages/Blogs";
+import { Careers } from "./pages/Careers";
+import { JobDetail } from "./pages/JobDetail";
 import { NotFound } from "./pages/NotFound";
 
 export function AppRoutes() {
@@ -24,6 +26,9 @@ export function AppRoutes() {
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/:id" element={<JobDetail />} />
+          <Route path="/company/careers" element={<Navigate to="/careers" replace />} />
           <Route path="/products/tradingfootprint" element={<TradingFootprint />} />
           <Route path="/products/crushed-stone" element={<CrushedStone />} />
           <Route path="/services/custom-software" element={<CustomizeSoftware />} />

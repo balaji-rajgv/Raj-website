@@ -64,8 +64,10 @@ export function generateOrganizationSchema() {
       }
     ],
     sameAs: [
-      "https://www.linkedin.com/company/raj-global-ventures",
-      "https://twitter.com/rajglobalventures"
+      "https://www.linkedin.com/in/raj-global-ventures-407813441",
+      "https://www.instagram.com/raj_globalventures/",
+      "https://x.com/raj_globalv",
+      "https://www.youtube.com/@Raj_globalventures"
     ]
   };
 }
@@ -129,6 +131,13 @@ export function generateSiteNavigationSchema() {
       {
         "@type": "SiteNavigationElement",
         position: 8,
+        name: "Careers",
+        description: "Join Raj Global Ventures in Tirunelveli across engineering, quant research, product design, and operations.",
+        url: `${SITE_URL}/careers`
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 9,
         name: "Contact Us",
         description: "Reach our engineering and architecture team for consultations.",
         url: `${SITE_URL}/contact`
