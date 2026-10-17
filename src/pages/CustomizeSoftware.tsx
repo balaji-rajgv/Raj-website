@@ -7,7 +7,6 @@ import {
   ShieldCheckIcon,
   WorkflowIcon,
   LayoutDashboardIcon,
-  ArrowRightIcon,
   CheckCircle2Icon,
   FileCode2Icon
 } from "lucide-react";
@@ -84,6 +83,11 @@ export function CustomizeSoftware() {
       />
 
       <PageHero
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services/custom-software" },
+          { name: "Customize Software Solution", path: "/services/custom-software" }
+        ]}
         eyebrow="Raj Global Ventures · Technology Services"
         title="Tailored software solutions built for real-world business impact"
         description="We turn complex business challenges into clear, practical software solutions. From bespoke enterprise applications and workflow automation to high-availability cloud platforms, we engineer systems that give your business a lasting edge."
@@ -147,31 +151,6 @@ export function CustomizeSoftware() {
                 <p className="mt-2 text-xs leading-relaxed text-muted">{step.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Trust & Ownership Banner */}
-      <section className="w-full bg-white py-16 border-t border-line">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-8 rounded-3xl bg-ink p-8 text-white md:p-12 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-8">
-              <h3 className="text-2xl font-semibold md:text-3xl">
-                Ready to turn your software requirements into reality?
-              </h3>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70">
-                Whether you need a full enterprise platform or want to automate a manual bottleneck, let's talk about what your business needs.
-              </p>
-            </div>
-            <div className="lg:col-span-4 lg:flex lg:justify-end">
-              <Link
-                to="/contact?interest=Customize Software Solution"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-brand-soft"
-              >
-                Start a Conversation
-                <ArrowRightIcon className="h-4 w-4" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>

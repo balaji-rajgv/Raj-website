@@ -31,6 +31,11 @@ export function TradingFootprint() {
         image="/ec15f097-a0d2-4707-8ff9-187017f132c4.jpg"
       />
       <PageHero
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products/tradingfootprint" },
+          { name: "TradingFootprint", path: "/products/tradingfootprint" }
+        ]}
         eyebrow="TradingFootprint · Multi-Asset Algo Platform · Coming Soon"
         title="Trade what the order flow is telling you across all markets"
         description="We are actively building TradingFootprint for Options, Futures, Equity, and Commodities — combining 20+ broker connects, AI-assisted recommendations, live financial news, expert guides, and real-time order-flow footprint charts."

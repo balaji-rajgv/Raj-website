@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { openPositions } from "../data/careers";
 import { SEO } from "../components/SEO";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FinalCta } from "../components/FinalCta";
 
 export function JobDetail() {
@@ -89,17 +90,28 @@ export function JobDetail() {
         keywords={`${job.title}, ${job.vrCode}, Raj Global Ventures jobs, remote internship, tech careers, ${job.skills.join(", ")}`}
       />
 
-      {/* Header Bar with Back Link & Quick Breadcrumb */}
+      {/* Header Bar with Back Link & Semantic Breadcrumbs for Site Structure */}
       <section className="border-b border-line bg-canvas/30 py-4">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <Link
-              to="/careers"
-              className="inline-flex items-center gap-2 text-xs font-medium text-muted transition-colors hover:text-ink"
-            >
-              <ArrowLeftIcon className="h-3.5 w-3.5" />
-              <span>Back to all open positions</span>
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link
+                to="/careers"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-muted transition-colors hover:text-ink shrink-0"
+                title="Back to all open positions"
+              >
+                <ArrowLeftIcon className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">Back</span>
+              </Link>
+              <span className="hidden sm:inline text-line" aria-hidden="true">|</span>
+              <Breadcrumbs
+                items={[
+                  { name: "Home", path: "/" },
+                  { name: "Careers", path: "/careers" },
+                  { name: job.title, path: `/careers/${job.id}` }
+                ]}
+              />
+            </div>
 
             <div className="flex items-center gap-3">
               <span className="font-mono text-xs font-medium text-brand border border-brand/25 bg-brand-soft/40 px-2.5 py-1 rounded">

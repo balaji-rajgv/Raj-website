@@ -15,6 +15,10 @@ export function About() {
         keywords="About Raj Global Ventures, Three Generations One Vision, Tirunelveli, business solutions, innovation, technology, crushed stone aggregates, TradingFootprint"
       />
       <PageHero
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "About Us", path: "/about" }
+        ]}
         eyebrow="About Raj Global Ventures"
         title="Three Generations. One Vision: Solving What Matters."
         description="Three generations of business experience have given us more than knowledge—they’ve given us the ability to recognize problems before they become barriers. We turn complex business challenges into clear, practical solutions, backed by real experience and measurable results."

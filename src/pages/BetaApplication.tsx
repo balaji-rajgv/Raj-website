@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 
 const inputClass =
   "mt-2 block w-full rounded-lg border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors duration-150 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30";
@@ -92,6 +93,16 @@ export function BetaApplication() {
         <div className="pointer-events-none absolute -right-20 top-40 h-96 w-96 rounded-full bg-sun/5 blur-3xl" aria-hidden="true" />
 
         <div className="relative mx-auto max-w-7xl px-6">
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Resources", path: "/blogs" },
+                { name: "Early Beta Access", path: "/beta" }
+              ]}
+            />
+          </div>
+
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-line bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-ink shadow-sm backdrop-blur">
               <span className="flex h-2 w-2 rounded-full bg-sun animate-pulse" />

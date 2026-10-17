@@ -1,45 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  BriefcaseIcon,
-  ClockIcon,
   ArrowRightIcon,
   SearchIcon,
   XIcon,
   SendIcon,
-  Building2Icon,
   HelpCircleIcon,
-  ChevronDownIcon,
   LaptopIcon,
-  Code2Icon,
   AwardIcon,
   GraduationCapIcon,
-  CompassIcon,
   FilterIcon,
-  CheckCircle2Icon,
   RotateCcwIcon,
-  TargetIcon,
-  TrendingUpIcon,
-  ZapIcon,
   MailIcon
 } from "lucide-react";
-import {
-  openPositions,
-  careerBenefits,
-  hiringPhilosophy,
-  hiringProcessSteps,
-  careerFaqs,
-  JobRole
-} from "../data/careers";
+import { openPositions } from "../data/careers";
 import { SEO } from "../components/SEO";
-import { FinalCta } from "../components/FinalCta";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { GeneralCareersIllustration } from "../components/CareersIllustration";
 
 export function Careers() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDept, setSelectedDept] = useState<string>("All");
   const [selectedDuration, setSelectedDuration] = useState<string>("All");
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [expandedSkills, setExpandedSkills] = useState<Record<string, boolean>>({});
 
   const toggleSkills = (jobId: string) => {
@@ -78,10 +60,6 @@ export function Careers() {
     setSelectedDuration("All");
   };
 
-  const toggleFaq = (index: number) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
-
   return (
     <>
       <SEO
@@ -92,10 +70,20 @@ export function Careers() {
       />
 
       {/* Hero Section with General Vector SVG Illustration */}
-      <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-16 md:py-24">
+      <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
+          {/* Breadcrumb Navigation for Site Structure & SEO */}
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Careers", path: "/careers" }
+              ]}
+            />
+          </div>
+
           <div className="grid items-center gap-12 lg:grid-cols-12">
-            {/* Left Column: Heading, Philosophy & Highlights */}
+            {/* Left Column: Heading, Highlights & Exploration */}
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-1 text-xs font-semibold text-ink">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand" />
@@ -111,7 +99,7 @@ export function Careers() {
                 Join our remote engineering team building robust software, scalable backends, and responsive applications.
               </p>
 
-              {/* Quick Info Badges (Neutral, unpolished styles without bright colored bg) */}
+              {/* Quick Info Badges */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <span className="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-3 py-1.5 text-xs text-ink">
                   <LaptopIcon className="h-4 w-4 text-ink" />
@@ -141,46 +129,12 @@ export function Careers() {
                   <span>Explore Open Opportunities</span>
                   <ArrowRightIcon className="h-4 w-4" />
                 </a>
-
-                <a
-                  href="#how-we-hire"
-                  className="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-5 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink"
-                >
-                  <span>How We Hire</span>
-                </a>
               </div>
             </div>
 
             {/* Right Column: General Careers Vector SVG Illustration */}
             <div className="lg:col-span-6">
               <GeneralCareersIllustration />
-            </div>
-          </div>
-
-          {/* Value Pillars Banner (No artificial box backgrounds for icons) */}
-          <div className="mt-14 grid grid-cols-1 gap-4 border-t border-line pt-8 sm:grid-cols-3">
-            <div className="flex items-start gap-3 rounded-xl border border-line bg-white p-5">
-              <Code2Icon className="h-5 w-5 text-ink shrink-0 mt-0.5" />
-              <div>
-                <p className="text-xs font-semibold text-ink">Passionate Problem Solvers</p>
-                <p className="text-xs text-muted mt-1">Curiosity, craftsmanship, and clean pragmatic code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 rounded-xl border border-line bg-white p-5">
-              <Building2Icon className="h-5 w-5 text-ink shrink-0 mt-0.5" />
-              <div>
-                <p className="text-xs font-semibold text-ink">Business &amp; Impact Driven</p>
-                <p className="text-xs text-muted mt-1">Direct measurable value for real users and products</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 rounded-xl border border-line bg-white p-5">
-              <AwardIcon className="h-5 w-5 text-ink shrink-0 mt-0.5" />
-              <div>
-                <p className="text-xs font-semibold text-ink">Career Progression</p>
-                <p className="text-xs text-muted mt-1">Performance-based full-time permanent conversion</p>
-              </div>
             </div>
           </div>
         </div>
@@ -486,159 +440,6 @@ export function Careers() {
           </div>
         </div>
       </section>
-
-      {/* HOW WE HIRE Section (General Philosophy, no emojis, no artificial icon background boxes) */}
-      <section
-        id="how-we-hire"
-        className="w-full bg-canvas/30 py-20 md:py-28 border-t border-b border-line"
-        aria-labelledby="how-we-hire-heading"
-      >
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold text-muted uppercase tracking-wider">{hiringPhilosophy.eyebrow}</p>
-            <h2 id="how-we-hire-heading" className="mt-2 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
-              {hiringPhilosophy.title}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted">
-              {hiringPhilosophy.description}
-            </p>
-          </div>
-
-          {/* 4 General Process Steps */}
-          <div className="mt-14 grid gap-8 md:grid-cols-4">
-            {hiringProcessSteps.map((step) => (
-              <div key={step.step} className="rounded-2xl border border-line bg-white p-6 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-semibold text-ink border border-line px-2 py-0.5 rounded">
-                    {step.step}
-                  </span>
-                  <span className="text-[10px] text-muted">
-                    {step.timeframe}
-                  </span>
-                </div>
-                <h3 className="text-sm font-semibold text-ink">{step.title}</h3>
-                <p className="text-xs leading-relaxed text-muted">{step.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* What We Value Pillars (Clean icons with NO artificial background boxes, NO emojis) */}
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl border border-line bg-white p-6 space-y-2">
-              <TargetIcon className="h-5 w-5 text-ink" />
-              <h4 className="text-sm font-semibold text-ink">Root-Cause Curiosity</h4>
-              <p className="text-xs leading-relaxed text-muted">
-                We value individuals who dig past surface symptoms to understand why systems behave the way they do.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-line bg-white p-6 space-y-2">
-              <TrendingUpIcon className="h-5 w-5 text-ink" />
-              <h4 className="text-sm font-semibold text-ink">Business Value Alignment</h4>
-              <p className="text-xs leading-relaxed text-muted">
-                Code exists to solve problems for real users and create sustainable commercial value.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-line bg-white p-6 space-y-2">
-              <ZapIcon className="h-5 w-5 text-ink" />
-              <h4 className="text-sm font-semibold text-ink">High Autonomy &amp; Speed</h4>
-              <p className="text-xs leading-relaxed text-muted">
-                We provide the context and support, and trust you to execute with ownership and care.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Build Your Career With Us */}
-      <section className="w-full bg-white py-20 md:py-28" aria-labelledby="why-rajgv-heading">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold text-muted uppercase tracking-wider">CULTURE &amp; IMPACT</p>
-            <h2 id="why-rajgv-heading" className="mt-2 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
-              Why join Raj Global Ventures
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted">
-              Three generations of business stability meet modern software engineering, distributed systems, and real-world impact.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {careerBenefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="rounded-2xl border border-line bg-white p-7 transition-colors hover:border-ink/30 space-y-3"
-              >
-                <span className="inline-block rounded border border-line px-2 py-0.5 text-[11px] text-muted">
-                  {benefit.badge}
-                </span>
-                <h3 className="text-base font-semibold text-ink">
-                  {benefit.title}
-                </h3>
-                <p className="text-xs leading-relaxed text-muted">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Frequently Asked Questions */}
-      <section className="w-full bg-canvas/30 py-20 md:py-28 border-t border-line" aria-labelledby="faq-heading">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center">
-            <p className="text-xs font-semibold text-muted uppercase tracking-wider">HAVE QUESTIONS?</p>
-            <h2 id="faq-heading" className="mt-2 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
-              Frequently asked questions about careers
-            </h2>
-            <p className="mt-3 text-base text-muted">
-              Answers regarding our remote internships, full-time conversions, and hiring steps.
-            </p>
-          </div>
-
-          <div className="mt-12 space-y-4">
-            {careerFaqs.map((faq, idx) => (
-              <div
-                key={faq.question}
-                className="overflow-hidden rounded-xl border border-line bg-white transition-colors"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(idx)}
-                  className="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-ink"
-                  aria-expanded={openFaqIndex === idx}
-                >
-                  <span className="flex items-center gap-3">
-                    <HelpCircleIcon className="h-4 w-4 text-ink shrink-0" />
-                    <span>{faq.question}</span>
-                  </span>
-                  <ChevronDownIcon
-                    className={`h-4 w-4 text-muted transition-transform duration-200 ${
-                      openFaqIndex === idx ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {openFaqIndex === idx && (
-                  <div className="border-t border-line bg-canvas/10 px-5 pb-5 pt-4 text-xs leading-relaxed text-muted">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <FinalCta
-        title="Ready to Build What Matters?"
-        subtitle="Three Generations. One Vision."
-        description="We look for people passionate about solving problems and driving business. Explore our open positions and apply today."
-        primaryCta={{ label: "Explore Open Roles", to: "#open-roles" }}
-        secondaryCta={{ label: "Contact Us", to: "/contact" }}
-      />
     </>
   );
 }

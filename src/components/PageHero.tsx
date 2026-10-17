@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "lucide-react";
+import { Breadcrumbs } from "./Breadcrumbs";
+import { BreadcrumbItem } from "../seo/config";
 
 type Cta = {label: string;to: string;};
 
@@ -13,9 +15,10 @@ type PageHeroProps = {
   imageAlt: string;
   primaryCta: Cta;
   secondaryCta?: Cta;
+  breadcrumbs?: BreadcrumbItem[];
 };
 
-export function PageHero({ eyebrow, title, description, image, imageAlt, primaryCta, secondaryCta }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, image, imageAlt, primaryCta, secondaryCta, breadcrumbs }: PageHeroProps) {
   const isExternal = (url: string) => url.startsWith("http://") || url.startsWith("https://");
 
   const renderCta = (cta: Cta, isPrimary: boolean) => {
@@ -54,6 +57,11 @@ export function PageHero({ eyebrow, title, description, image, imageAlt, primary
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:py-20 lg:grid-cols-12">
         <div className="lg:col-span-6">
+          {breadcrumbs && breadcrumbs.length > 0 && (
+            <div className="mb-4">
+              <Breadcrumbs items={breadcrumbs} />
+            </div>
+          )}
           <p className="text-sm font-medium text-brand">{eyebrow}</p>
           <h1 className="mt-4 text-4xl font-semibold leading-[1.08] tracking-tight text-ink md:text-[54px]">{title}</h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">{description}</p>

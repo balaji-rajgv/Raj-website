@@ -92,6 +92,11 @@ export function CrushedStone() {
       />
 
       <PageHero
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products/crushed-stone" },
+          { name: "Crushed Stone", path: "/products/crushed-stone" }
+        ]}
         eyebrow="Raj Global Ventures · Aggregates & Infrastructure"
         title="High-grade crushed stone aggregates built on three generations of trust"
         description="Supplying certified blue metal aggregates, manufactured sand, and foundation materials direct from our quarries in Tirunelveli. Supporting major road, commercial, and residential developments."

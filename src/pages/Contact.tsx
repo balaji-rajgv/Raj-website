@@ -24,6 +24,7 @@ import {
   publicHolidays
 } from "../data/contact";
 import { SEO } from "../components/SEO";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 
 const inputClass =
   "mt-2 block w-full rounded-lg border bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand/30";
@@ -56,8 +57,16 @@ export function Contact() {
         canonical="/contact"
         keywords="contact Raj Global Ventures, software requirements, crushed stone order, Tirunelveli business inquiry"
       />
-      <section className="w-full bg-canvas py-16 md:py-24" aria-labelledby="contact-heading">
+      <section className="w-full bg-canvas py-12 md:py-20" aria-labelledby="contact-heading">
         <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Contact Us", path: "/contact" }
+              ]}
+            />
+          </div>
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-brand">Get in Touch</p>
             <h1

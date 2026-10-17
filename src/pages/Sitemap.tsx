@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 
 export function Sitemap() {
   const sections = [
@@ -140,8 +141,16 @@ export function Sitemap() {
         keywords="Raj Global Ventures sitemap, TradingFootprint, crushed stone, customize software, Tirunelveli"
       />
 
-      <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-16 md:py-24">
+      <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Sitemap", path: "/sitemap" }
+              ]}
+            />
+          </div>
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
               <CompassIcon className="h-3.5 w-3.5" />

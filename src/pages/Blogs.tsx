@@ -8,8 +8,8 @@ import {
   CheckCircle2Icon,
   BellIcon
 } from "lucide-react";
-import { FinalCta } from "../components/FinalCta";
 import { SEO } from "../components/SEO";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 
 export function Blogs() {
   const [subscribedEmail, setSubscribedEmail] = useState("");
@@ -32,8 +32,18 @@ export function Blogs() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-16 md:py-24">
+      <section className="relative overflow-hidden border-b border-line bg-canvas/40 py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Resources", path: "/blogs" },
+                { name: "Blogs & Insights", path: "/blogs" }
+              ]}
+            />
+          </div>
+
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
@@ -136,11 +146,6 @@ export function Blogs() {
         </div>
       </section>
 
-      <FinalCta
-        title="Let's Build What's Next"
-        subtitle="Creating opportunities. Building lasting value."
-        description="Connect with Raj Global Ventures to explore strategic opportunities, partnerships, and new possibilities for sustainable growth."
-      />
     </>
   );
 }
