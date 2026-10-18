@@ -11,9 +11,10 @@ import {
   GraduationCapIcon,
   FilterIcon,
   RotateCcwIcon,
-  MailIcon
+  MailIcon,
+  ExternalLinkIcon
 } from "lucide-react";
-import { openPositions } from "../data/careers";
+import { openPositions, CAREERS_GOOGLE_FORM_URL } from "../data/careers";
 import { SEO } from "../components/SEO";
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { GeneralCareersIllustration } from "../components/CareersIllustration";
@@ -128,6 +129,16 @@ export function Careers() {
                 >
                   <span>Explore Open Opportunities</span>
                   <ArrowRightIcon className="h-4 w-4" />
+                </a>
+
+                <a
+                  href={CAREERS_GOOGLE_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-5 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink hover:text-brand shadow-xs"
+                >
+                  <span>Apply Online</span>
+                  <ExternalLinkIcon className="h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -399,13 +410,24 @@ export function Careers() {
                           </div>
                         </div>
 
-                      {/* Right action */}
-                      <div className="flex flex-col items-start lg:items-end justify-between gap-4 shrink-0 pt-1">
+                      {/* Right action: Apply Online + Full JD view */}
+                      <div className="flex flex-wrap sm:flex-nowrap lg:flex-col items-stretch sm:items-center lg:items-end justify-between gap-2.5 shrink-0 pt-1">
+                        <a
+                          href={job.applyUrl || CAREERS_GOOGLE_FORM_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-4 py-2.5 text-xs font-semibold text-white transition-colors duration-150 hover:bg-brand whitespace-nowrap shadow-xs"
+                          title={`Apply for ${job.title} (${job.vrCode})`}
+                        >
+                          <span>Apply Now</span>
+                          <ExternalLinkIcon className="h-3.5 w-3.5" />
+                        </a>
+
                         <Link
                           to={`/careers/${job.id}`}
-                          className="inline-flex items-center gap-2 rounded-lg bg-ink px-5 py-2.5 text-xs font-semibold text-white transition-colors duration-150 hover:bg-brand whitespace-nowrap"
+                          className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-line bg-white px-3.5 py-2 text-xs font-medium text-muted hover:text-ink hover:border-ink transition-colors whitespace-nowrap"
                         >
-                          <span>View Details &amp; Apply</span>
+                          <span>View Full JD</span>
                           <ArrowRightIcon className="h-3.5 w-3.5" />
                         </Link>
                       </div>
@@ -423,17 +445,29 @@ export function Careers() {
                       Don't see your specific specialization?
                     </h3>
                     <p className="mt-1 text-xs text-muted max-w-lg">
-                      We are always eager to meet curious developers and problem-solvers. Send your CV and a brief introduction to our talent desk.
+                      We are always eager to meet curious developers and problem-solvers. Fill out our application form or reach our talent desk directly.
                     </p>
                   </div>
 
-                  <a
-                    href="mailto:hr@rajgv.com?subject=General%20Application%20-%20Raj%20Global%20Ventures"
-                    className="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-2.5 text-xs font-semibold text-ink transition-colors hover:border-ink whitespace-nowrap"
-                  >
-                    <SendIcon className="h-3.5 w-3.5" />
-                    <span>Send CV to hr@rajgv.com</span>
-                  </a>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href={CAREERS_GOOGLE_FORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-lg bg-ink px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-brand whitespace-nowrap"
+                    >
+                      <span>Submit Application Form</span>
+                      <ExternalLinkIcon className="h-3.5 w-3.5" />
+                    </a>
+
+                    <a
+                      href="mailto:hr@rajgv.com?subject=General%20Application%20-%20Raj%20Global%20Ventures"
+                      className="inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-2.5 text-xs font-semibold text-ink transition-colors hover:border-ink whitespace-nowrap"
+                    >
+                      <MailIcon className="h-3.5 w-3.5" />
+                      <span>Email hr@rajgv.com</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

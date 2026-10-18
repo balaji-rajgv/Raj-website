@@ -1,5 +1,7 @@
 import rawJobs from "./jobs.json";
 
+export const CAREERS_GOOGLE_FORM_URL = "https://forms.gle/xCAQfDMTeL4pKsHb8";
+
 export interface JobRole {
   id: string;
   vrCode: string;
@@ -26,6 +28,7 @@ export interface JobRole {
   contactEmail?: string;
   contactPhone?: string;
   highlights?: string[];
+  applyUrl?: string;
 }
 
 export const careerBenefits = [
@@ -111,6 +114,6 @@ export const careerFaqs = [
   },
   {
     question: "How can I apply directly?",
-    answer: "You can click on any job to view the full job description and submit your application online, email hr@rajgv.com with your CV and job VRcode, or message us on WhatsApp at +91 98657 98157."
+    answer: "You can apply directly via our official application form linked on every job posting, submit through the job page, email hr@rajgv.com with your CV and job VRcode, or message us on WhatsApp at +91 98657 98157."
   }
 ];

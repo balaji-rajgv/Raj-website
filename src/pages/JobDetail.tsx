@@ -3,11 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import {
   ArrowLeftIcon,
   BriefcaseIcon,
-  MapPinIcon,
   ClockIcon,
   SparklesIcon,
-  CheckCircle2Icon,
-  SendIcon,
   PhoneIcon,
   MailIcon,
   Share2Icon,
@@ -16,9 +13,12 @@ import {
   AwardIcon,
   Code2Icon,
   HelpCircleIcon,
-  LaptopIcon
+  LaptopIcon,
+  CheckCircle2Icon,
+  ExternalLinkIcon,
+  FileTextIcon
 } from "lucide-react";
-import { openPositions } from "../data/careers";
+import { openPositions, CAREERS_GOOGLE_FORM_URL } from "../data/careers";
 import { SEO } from "../components/SEO";
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FinalCta } from "../components/FinalCta";
@@ -26,13 +26,6 @@ import { FinalCta } from "../components/FinalCta";
 export function JobDetail() {
   const { id } = useParams<{ id: string }>();
 
-  // Application form states
-  const [applicantName, setApplicantName] = useState("");
-  const [applicantEmail, setApplicantEmail] = useState("");
-  const [applicantPhone, setApplicantPhone] = useState("");
-  const [applicantPortfolio, setApplicantPortfolio] = useState("");
-  const [applicantCover, setApplicantCover] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [showAllSkills, setShowAllSkills] = useState(false);
 
@@ -49,12 +42,6 @@ export function JobDetail() {
       setCopiedLink(true);
       setTimeout(() => setCopiedLink(false), 2000);
     }
-  };
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!applicantName || !applicantEmail) return;
-    setFormSubmitted(true);
   };
 
   if (!job) {
@@ -207,13 +194,16 @@ export function JobDetail() {
             </div>
 
             {/* Quick Action Button & Direct Contacts */}
-            <div className="flex flex-col items-start lg:items-end gap-3 shrink-0">
+            <div className="flex flex-col items-start lg:items-end gap-2.5 shrink-0">
               <a
-                href="#apply-form"
+                href={job.applyUrl || CAREERS_GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-ink px-6 py-3 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-brand"
+                title={`Apply for ${job.title}`}
               >
-                <span>Apply for this Position</span>
-                <SendIcon className="h-3.5 w-3.5" />
+                <span>Apply Online</span>
+                <ExternalLinkIcon className="h-3.5 w-3.5" />
               </a>
 
               <p className="text-xs text-muted">
@@ -334,129 +324,73 @@ export function JobDetail() {
                 </div>
               )}
 
-              {/* Application Form Section */}
+              {/* Application Section */}
               <div id="apply-form" className="rounded-2xl border border-line bg-white p-8 md:p-10 scroll-mt-24 space-y-6">
-                <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center pb-6 border-b border-line">
-                  <div>
-                    <span className="font-mono text-xs text-ink border border-line bg-canvas px-2.5 py-1 rounded">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="font-mono text-xs font-medium text-brand border border-brand/25 bg-brand-soft/40 px-2.5 py-0.5 rounded">
                       VRcode: {job.vrCode}
                     </span>
-                    <h3 className="mt-2 text-2xl font-semibold text-ink">
-                      Apply for {job.title}
-                    </h3>
+                    <span className="text-xs text-muted">Application Portal</span>
                   </div>
-                  <p className="text-xs text-muted">
-                    Direct resume:{" "}
-                    <a href={`mailto:${job.contactEmail || "hr@rajgv.com"}`} className="text-ink underline hover:text-brand font-medium">
-                      {job.contactEmail || "hr@rajgv.com"}
-                    </a>
+                  <h2 className="text-2xl font-semibold text-ink">
+                    Apply for {job.title}
+                  </h2>
+                  <p className="mt-2 text-sm text-muted leading-relaxed max-w-xl">
+                    Submit your application through our official online form. When completing the form, please ensure you reference position VRcode <strong className="font-mono text-ink">{job.vrCode}</strong>.
                   </p>
                 </div>
 
-                {formSubmitted ? (
-                  <div className="rounded-xl border border-line bg-canvas/20 p-8 text-center space-y-3">
-                    <CheckCircle2Icon className="mx-auto h-10 w-10 text-ink" />
-                    <h4 className="text-lg font-semibold text-ink">Application Submitted</h4>
-                    <p className="text-xs text-muted max-w-md mx-auto">
-                      Thank you, {applicantName}. Your application for {job.title} ({job.vrCode}) has been received. Our team will review your profile and reach out via {applicantEmail} shortly.
-                    </p>
-                    <p className="text-xs text-muted pt-2">
-                      WhatsApp inquiries:{" "}
-                      <a href="tel:9865798157" className="font-semibold text-ink">
-                        +91 98657 98157
-                      </a>
-                    </p>
+                <div className="rounded-xl border border-line bg-canvas/30 p-6 md:p-8 space-y-5">
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-semibold text-ink">What to have ready:</h3>
+                    <ul className="space-y-1.5 text-xs text-muted">
+                      <li className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-ink" />
+                        <span>Updated Resume / CV</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-ink" />
+                        <span>GitHub profile, portfolio, or code samples</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-ink" />
+                        <span>Brief summary of your availability and relevant experience</span>
+                      </li>
+                    </ul>
                   </div>
-                ) : (
-                  <form onSubmit={handleFormSubmit} className="space-y-4">
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div>
-                        <label className="block text-xs font-medium text-ink mb-1">
-                          Full Name *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={applicantName}
-                          onChange={(e) => setApplicantName(e.target.value)}
-                          placeholder="e.g. Arun Kumar"
-                          className="w-full rounded-lg border border-line bg-white px-3.5 py-2 text-xs text-ink placeholder:text-muted focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
-                        />
-                      </div>
 
-                      <div>
-                        <label className="block text-xs font-medium text-ink mb-1">
-                          Email Address *
-                        </label>
-                        <input
-                          type="email"
-                          required
-                          value={applicantEmail}
-                          onChange={(e) => setApplicantEmail(e.target.value)}
-                          placeholder="e.g. arun@example.com"
-                          className="w-full rounded-lg border border-line bg-white px-3.5 py-2 text-xs text-ink placeholder:text-muted focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
-                        />
-                      </div>
-                    </div>
+                  <div className="pt-2">
+                    <a
+                      href={job.applyUrl || CAREERS_GOOGLE_FORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-6 py-3 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-brand"
+                    >
+                      <span>Open Application Form</span>
+                      <ExternalLinkIcon className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
 
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div>
-                        <label className="block text-xs font-medium text-ink mb-1">
-                          Phone / WhatsApp *
-                        </label>
-                        <input
-                          type="tel"
-                          required
-                          value={applicantPhone}
-                          onChange={(e) => setApplicantPhone(e.target.value)}
-                          placeholder="e.g. +91 98765 43210"
-                          className="w-full rounded-lg border border-line bg-white px-3.5 py-2 text-xs text-ink placeholder:text-muted focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-medium text-ink mb-1">
-                          GitHub / LinkedIn / Portfolio Link *
-                        </label>
-                        <input
-                          type="url"
-                          required
-                          value={applicantPortfolio}
-                          onChange={(e) => setApplicantPortfolio(e.target.value)}
-                          placeholder="https://github.com/... or LinkedIn"
-                          className="w-full rounded-lg border border-line bg-white px-3.5 py-2 text-xs text-ink placeholder:text-muted focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-ink mb-1">
-                        Brief Note / Availability
-                      </label>
-                      <textarea
-                        rows={3}
-                        value={applicantCover}
-                        onChange={(e) => setApplicantCover(e.target.value)}
-                        placeholder="Tell us about your background, projects, or why you're interested in this role..."
-                        className="w-full rounded-lg border border-line bg-white px-3.5 py-2 text-xs text-ink placeholder:text-muted focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
-                      />
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                      <p className="text-xs text-muted">
-                        Position VRcode: <span className="font-mono text-ink font-semibold">{job.vrCode}</span>
-                      </p>
-
-                      <button
-                        type="submit"
-                        className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-ink px-6 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-brand"
-                      >
-                        <SendIcon className="h-3.5 w-3.5" />
-                        <span>Submit Application</span>
-                      </button>
-                    </div>
-                  </form>
-                )}
+                {/* Direct Contacts Alternative */}
+                <div className="pt-2 border-t border-line space-y-2">
+                  <p className="text-xs text-muted leading-relaxed">
+                    Prefer applying by email? Send your CV with subject <strong className="text-ink">"Application for {job.title} ({job.vrCode})"</strong> to{" "}
+                    <a
+                      href={`mailto:${job.contactEmail || "hr@rajgv.com"}?subject=Application%20for%20${encodeURIComponent(job.title)}%20(${job.vrCode})`}
+                      className="font-semibold text-ink underline hover:text-brand"
+                    >
+                      {job.contactEmail || "hr@rajgv.com"}
+                    </a>
+                  </p>
+                  <p className="text-xs text-muted">
+                    WhatsApp queries:{" "}
+                    <a href="tel:9865798157" className="font-semibold text-ink hover:text-brand">
+                      +91 98657 98157
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -514,10 +448,14 @@ export function JobDetail() {
 
                   <div className="pt-2">
                     <a
-                      href="#apply-form"
-                      className="block w-full rounded-lg bg-ink py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-brand"
+                      href={job.applyUrl || CAREERS_GOOGLE_FORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full rounded-lg bg-ink py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-brand shadow-xs"
+                      title={`Apply for ${job.title}`}
                     >
-                      Apply Now
+                      <span>Apply Online</span>
+                      <ExternalLinkIcon className="h-3.5 w-3.5" />
                     </a>
                   </div>
                 </div>

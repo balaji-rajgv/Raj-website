@@ -126,7 +126,7 @@ export const routesSEO: Record<string, RouteSEOConfig> = {
   },
   "/careers/flutter-developer": {
     path: "/careers/flutter-developer",
-    title: "Flutter Developer (2+ Years Experience) (RGV-FLD-2026) | Careers at Raj Global Ventures",
+    title: "Flutter Developer  (RGV-FLD-2026) | Careers at Raj Global Ventures",
     description:
       "Flutter Developer (RGV-FLD-2026). Remote full-time role for engineers with 2+ years experience. Flutter, Dart, Clean Architecture, BLoC, Riverpod, performance optimization.",
     keywords: "Flutter Developer, 2+ years experience, Dart, Clean Architecture, BLoC, Riverpod, remote mobile engineer",
@@ -136,7 +136,7 @@ export const routesSEO: Record<string, RouteSEOConfig> = {
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Careers", path: "/careers" },
-      { name: "Flutter Developer (2+ Years Experience)", path: "/careers/flutter-developer" }
+      { name: "Flutter Developer", path: "/careers/flutter-developer" }
     ]
   },
   "/products/tradingfootprint": {

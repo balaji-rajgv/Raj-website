@@ -14,7 +14,14 @@
     "opportunity": "Based on performance during the internship, candidates may be offered a permanent full-time position.",
     "summary": "Looking for passionate students to solve real-world problems and drive business growth through practical software engineering across our core platforms.",
     "aboutRole": "Join our engineering team to solve meaningful problems and drive real business outcomes. As a General Software Engineering Intern at Raj Global Ventures, you will collaborate with experienced developers to build scalable features, automate workflows, and create high-value digital experiences.",
-    "skills": ["Problem Solving", "Java / TypeScript / Python", "Data Structures", "REST APIs", "Git", "Continuous Learning"],
+    "skills": [
+      "Problem Solving",
+      "Java / TypeScript / Python",
+      "Data Structures",
+      "REST APIs",
+      "Git",
+      "Continuous Learning"
+    ],
     "responsibilities": [
       "Collaborate with senior developers to design, develop, and test software solutions across our products.",
       "Write clean, maintainable, and well-documented code adhering to modern engineering best practices.",
@@ -37,6 +44,7 @@
     ],
     "contactEmail": "hr@rajgv.com",
     "contactPhone": "9865798157",
+    "applyUrl": "https://forms.gle/xCAQfDMTeL4pKsHb8",
     "highlights": [
       "Remote Work",
       "Full-Time Conversion Opportunity",
@@ -59,7 +67,14 @@
     "opportunity": "Potential full-time opportunity based on performance and business requirements.",
     "summary": "Looking for motivated students to gain practical experience in Java backend development, database management, API integration, and distributed systems.",
     "aboutRole": "Looking for motivated students to gain practical experience in Java backend development, database management, API integration, and distributed systems. Potential full-time opportunity based on performance and business requirements.",
-    "skills": ["Java", "SQL / PostgreSQL", "Spring Boot", "Apache Kafka", "Redis", "REST APIs"],
+    "skills": [
+      "Java",
+      "SQL / PostgreSQL",
+      "Spring Boot",
+      "Apache Kafka",
+      "Redis",
+      "REST APIs"
+    ],
     "responsibilities": [
       "Develop and maintain backend applications and microservices using Java.",
       "Work with PostgreSQL databases and design efficient REST APIs.",
@@ -83,6 +98,7 @@
     ],
     "contactEmail": "hr@rajgv.com",
     "contactPhone": "9865798157",
+    "applyUrl": "https://forms.gle/xCAQfDMTeL4pKsHb8",
     "highlights": [
       "Remote Work",
       "Distributed Systems & Kafka",
@@ -140,6 +156,7 @@
     ],
     "contactEmail": "hr@rajgv.com",
     "contactPhone": "9865798157",
+    "applyUrl": "https://forms.gle/xCAQfDMTeL4pKsHb8",
     "highlights": [
       "Remote Work",
       "Full-Time Conversion Opportunity",
@@ -150,7 +167,7 @@
   {
     "id": "flutter-developer",
     "vrCode": "RGV-FLD-2026",
-    "title": "Flutter Developer (2+ Years Experience)",
+    "title": "Flutter Developer ",
     "department": "Engineering",
     "team": "Mobile & Cross-Platform Applications",
     "location": "Remote",
@@ -204,6 +221,7 @@
     ],
     "contactEmail": "hr@rajgv.com",
     "contactPhone": "9865798157",
+    "applyUrl": "https://forms.gle/xCAQfDMTeL4pKsHb8",
     "highlights": [
       "Remote Work",
       "High Engineering Autonomy",
